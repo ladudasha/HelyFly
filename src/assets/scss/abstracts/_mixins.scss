@@ -17,3 +17,10 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+@mixin text ($fontSize, $fontWeight, $lineHeight, $color) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $color;
+}
