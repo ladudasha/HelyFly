@@ -540,6 +540,7 @@ template {
 @media (min-width: 1280px) {
     .main__title {
         max-width: 887px;
+        width: 100%;
     }
 }
 

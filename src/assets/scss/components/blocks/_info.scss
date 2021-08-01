@@ -1,0 +1,28 @@
+.info {
+    .container {
+        @extend %container;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        @include media(md) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+    &__title {
+        @include text(28px, 400, 34px, $secondaryColor);
+        width: 200px;
+        height: 67px;
+        margin: 0 auto;
+        margin-top: 40px;
+        grid-row: 1/2;
+    }
+    &__img {
+        // grid-row: 2/3;
+        @include media(md) {
+            grid-column: 2/3;
+        }
+    }
+}
