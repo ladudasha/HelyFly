@@ -1,5 +1,7 @@
 .main {
-    background-color: silver;
+    @include background ();
+    background-size: cover;
+    background-image: url(../images/main/bg-helyfly.jpg);
     color: $primaryColor;
     .container {
         @extend %container;
@@ -7,15 +9,79 @@
     &__wrapper {
         @include flex (center, $flex-direction: column);
         height: 655px;
+        @media screen and (min-width: 768px) {
+            height: 840px;
+        }
     }
     &__title {
         @include text (32px, 700, 39px, $primaryColor);
         max-width: 249px;
+        span {
+            color: $accentColor;
+        }
+        @include media(sm) {
+            font-size: 40px;
+            line-height: 49px;
+            max-width: 596px;
+        }
+        @include media(md) {
+            max-width: 887px;
+            width: 100%;
+        }
+        // @media screen and (min-width:768px) {
+        //     font-size: 40px;
+        //     line-height: 49px;
+        //     max-width: 596px;
+        // }
+        // @media screen and (min-width:1280px) {
+        //     max-width: 887px;
+        //     width: 100%;
+        // }
     }
-    &__price {
+    &__price-box {
         width: 200px;
         height: 86px;
-        background-image: url();
+        background-image: url(../images/main/orange.svg);
         background-repeat: no-repeat;
+        margin: 36px 0 14px;
+        padding: 9px 15px 23px 18px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 14px;
+    }
+    &__price-percent {
+        @include text (30px, 800, inherit, $primaryColor);
+        width: 47px;
+        height: 47px;
+        margin-top: 10px;
+        border-radius: 50%;
+        text-align: center;
+        border: 1px solid #FFFFFF;
+        filter: drop-shadow(0px 4px 15px rgba(255, 255, 255, 0.25)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+        transform: translateX(4px);
+    }
+    &__price-iner {
+        display: flex;
+        flex-direction: column;
+    }
+    &__price-label {
+        @include text (18px, 400, inherit, $primaryColor);
+        margin-bottom: 4px;
+    }
+    &__price-many {
+        @include text(30px, 800, inherit, $primaryColor);
+    }
+    &__btn {
+        @include text (16px, 900, 20px, $primaryColor);
+        max-width: 275px;
+        width: 100%;
+        height: 68px;
+        border: 3px solid $primaryColor;
+        filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
+        border-radius: 7px;
+        text-align: center;
+        transform: translateY(-6px);
     }
 }
