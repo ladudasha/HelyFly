@@ -1,0 +1,36 @@
+.photocards {
+    padding-top: 60px;
+    .container {
+        @extend %container;
+    }
+    &__wrapper {
+        @include flex(center, center, $flex-direction: column)
+    }
+    &__title {
+        @include text(26px, 400, 32px, $secondaryColor);
+        text-align: center;
+        margin: 0 auto 32px;
+        max-width: 263px;
+        @include media(sm) {
+            text-align: left;
+            margin-bottom: 30px;
+            @include text(28px, 500, 41px, $secondaryColor);
+            max-width: 315px;
+        }
+        @include media(md) {
+            max-width: 220px;
+            @include text(20px, 500, 30px, $secondaryColor);
+            margin-bottom: 50px;
+        }
+        @include media(lg) {
+            margin-bottom: 37px;
+            max-width: 219px;
+        }
+        &__more {
+            display: none;
+        }
+    }
+    &__grid {
+        display: grid;
+    }
+}

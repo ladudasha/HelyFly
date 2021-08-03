@@ -375,25 +375,25 @@ template {
     display: none;
 }
 
-.header .container, .main .container, .info .container {
+.header .container, .main .container, .info .container, .photocards .container {
     width: 100%;
     padding: 0 15px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container {
+    .header .container, .main .container, .info .container, .photocards .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container {
+    .header .container, .main .container, .info .container, .photocards .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container {
+    .header .container, .main .container, .info .container, .photocards .container {
         max-width: 1140px;
         padding: 0;
         margin: 0 auto;
@@ -670,7 +670,6 @@ template {
 }
 
 .info__img {
-    min-width: 320px;
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -825,6 +824,7 @@ template {
         font-weight: 400;
         line-height: 26px;
         color: #37373f;
+        margin-bottom: 0;
     }
 }
 
@@ -841,14 +841,34 @@ template {
     height: 41px;
 }
 
+@media (min-width: 576px) {
+    .info__reviews::before {
+        bottom: -7px;
+    }
+}
+
 .info .info__inner {
-    padding: 32px 0 30px 45px;
+    padding: 15px 0 15px 45px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+@media (min-width: 576px) {
+    .info .info__inner {
+        padding: 30px 0 30px 45px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: left;
+        justify-content: left;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
 }
 
 .info .info__reviews-img {
