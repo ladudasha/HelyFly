@@ -14,6 +14,7 @@
         @include media(sm) {
             text-align: left;
             margin-bottom: 30px;
+            margin-left: 0;
             @include text(28px, 500, 41px, $secondaryColor);
             max-width: 315px;
         }
@@ -26,11 +27,68 @@
             margin-bottom: 37px;
             max-width: 219px;
         }
-        &__more {
-            display: none;
-        }
     }
     &__grid {
         display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 15px;
+        overflow-x: auto;
+        width: 100%;
+        @include media(sm) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            max-width: 568px;
+        }
+        @include media(md) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            max-width: 100%;
+        }
+    }
+    &__grid-img:first-child {
+        margin-left: 0;
+    }
+    &__grid-img {
+        border-radius: 4px;
+        object-fit: cover;
+        @include media(md) {
+            width: 100%;
+        }
+    }
+    &__buttom {
+        display: none;
+        @include text(17px, 500, 25px, $linkColor);
+        padding: 45px 0 22px 0;
+        position: relative;
+        @include media(sm) {
+            display: block;
+        }
+        @include media(md) {
+            padding: 40px 0 30px 0;
+        }
+        @include media(lg) {
+            padding: 44px 0 27px 0;
+        }
+    }
+    &__buttom::before {
+        content: "";
+        background-image: url(../images/photocards/arrow.svg);
+        display: block;
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        top: 55px;
+        left: -15px;
+    }
+    &__buttom::after {
+        content: "";
+        background-image: url(../images/photocards/arrow.svg);
+        display: block;
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        top: 55px;
+        right: -15px;
     }
 }
