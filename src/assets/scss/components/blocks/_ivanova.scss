@@ -1,0 +1,38 @@
+.ivanova {
+    padding-top: 65px;
+    .container {
+        @extend %container;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        // grid-template-rows: repeat(1fr, 1fr, 1fr);
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img {
+        margin-bottom: 23px;
+    }
+    &__title {
+        @include text (18px, 500, 22px, $secondaryColor);
+        margin-bottom: 7px;
+    }
+    &__photograf {
+        margin-bottom: 7px;
+        @include text (14px, 400, 21px, $secondaryColor);
+    }
+    &__link {
+        max-width: 279px;
+        text-align: center;
+        margin-bottom: 15px;
+        // @include text (17px, 500, 25px, $linkColor);
+    }
+    &__title {
+        @include text (18px, 500, 25px, secondaryColor);
+        margin-bottom: 14px;
+    }
+}

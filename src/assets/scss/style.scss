@@ -1,7 +1,10 @@
 @import "./abstracts/normalize.scss";
 @import "./abstracts/vars";
 @import './abstracts/mixins';
+@import './components/title';
+@import './components/link';
 @import "./layout/header";
 @import "./components/blocks/main";
 @import "./components/blocks/info";
 @import "./components/blocks/photocards";
+@import "./components/blocks/ivanova";

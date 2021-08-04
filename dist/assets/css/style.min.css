@@ -336,20 +336,34 @@ template {
 [hidden] {
   display: none; }
 
-.header .container, .main .container, .info .container, .photocards .container {
+.header .container, .main .container, .info .container, .photocards .container, .ivanova .container {
   width: 100%;
   padding: 0 15px; }
   @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photocards .container {
+    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container {
       padding: 0 35px; } }
   @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photocards .container {
+    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container {
       padding: 0 50px; } }
   @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photocards .container {
+    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container {
       max-width: 1140px;
       padding: 0;
       margin: 0 auto; } }
+
+.title {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+  color: #37373F; }
+
+.link {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #5286ec; }
 
 .header {
   background-color: #fff; }
@@ -763,5 +777,40 @@ template {
     position: absolute;
     top: 55px;
     right: -15px; }
+
+.ivanova {
+  padding-top: 65px; }
+  .ivanova__grid {
+    display: grid;
+    grid-template-columns: 1fr; }
+  .ivanova__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .ivanova__img {
+    margin-bottom: 23px; }
+  .ivanova__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #37373f;
+    margin-bottom: 7px; }
+  .ivanova__photograf {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #37373f; }
+  .ivanova__link {
+    max-width: 279px;
+    text-align: center;
+    margin-bottom: 15px; }
+  .ivanova__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: secondaryColor;
+    margin-bottom: 14px; }
 
 /*# sourceMappingURL=style.min.css.map */
