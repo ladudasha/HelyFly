@@ -400,6 +400,13 @@ template {
     }
 }
 
+.text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #37373f;
+}
+
 .title {
     font-family: Montserrat;
     font-weight: 400;
@@ -815,7 +822,34 @@ template {
     height: 32px;
 }
 
-.info__reviews {
+.info__reiting {
+    padding: 15px 0 15px 45px;
+}
+
+.rating {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media (min-width: 576px) {
+    .rating {
+        padding: 30px 0 30px 45px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+.rating__reviews {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -824,7 +858,7 @@ template {
     margin-bottom: 10px;
 }
 
-.info__reviews span {
+.rating__reviews span {
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -832,7 +866,7 @@ template {
 }
 
 @media (min-width: 576px) {
-    .info__reviews span {
+    .rating__reviews span {
         font-size: 18px;
         font-weight: 600;
         line-height: 26px;
@@ -841,7 +875,7 @@ template {
 }
 
 @media (min-width: 576px) {
-    .info__reviews {
+    .rating__reviews {
         font-size: 18px;
         font-weight: 400;
         line-height: 26px;
@@ -851,7 +885,12 @@ template {
     }
 }
 
-.info__reviews::before {
+.rating__reviews-img {
+    width: 118px;
+    height: 17px;
+}
+
+.rating__reviews::before {
     content: "";
     background-image: url(../images/info/groupcup.svg);
     display: block;
@@ -865,38 +904,9 @@ template {
 }
 
 @media (min-width: 576px) {
-    .info__reviews::before {
+    .rating__reviews::before {
         bottom: -7px;
     }
-}
-
-.info .info__inner {
-    padding: 15px 0 15px 45px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-@media (min-width: 576px) {
-    .info .info__inner {
-        padding: 30px 0 30px 45px;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: left;
-        justify-content: left;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-direction: row;
-        flex-direction: row;
-    }
-}
-
-.info .info__reviews-img {
-    width: 118px;
-    height: 17px;
 }
 
 .photocards {
@@ -1083,10 +1093,13 @@ template {
     }
 }
 
+.ivanova__photo {
+    position: relative;
+}
+
 @media (min-width: 768px) {
     .ivanova__photo {
         margin-top: 43px;
-        position: relative;
     }
 }
 
@@ -1096,15 +1109,15 @@ template {
     }
 }
 
-.ivanova__photo__photo::after {
+.ivanova__photo::after {
     content: "";
     background-image: url(../images/ivanova/heart.svg);
     display: block;
     width: 31px;
     height: 27px;
     position: absolute;
-    top: 7px;
-    right: -15px;
+    top: 0px;
+    right: -85px;
 }
 
 .ivanova__img {

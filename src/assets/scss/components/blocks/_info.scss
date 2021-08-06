@@ -1,156 +1,118 @@
-        .info {
-            padding-top: 40px;
-            .container {
-                @extend %container;
-            }
-            &__wrapper {
-                display: grid;
+    .info {
+        padding-top: 40px;
+        .container {
+            @extend %container;
+        }
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            @include media(sm) {
                 grid-template-columns: 1fr;
-                @include media(sm) {
-                    grid-template-columns: 1fr;
-                }
-                @include media(md) {
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: 110px;
-                    column-gap: 37px;
-                }
             }
-            &__title {
-                @include text(28px, 400, 34px, $secondaryColor);
-                max-width: 195px;
-                margin: 0 auto 15px;
-                text-align: center;
-                @include media(sm) {
-                    @include text(40px, 500, 48px, $secondaryColor);
-                    max-width: 285px;
-                    margin-bottom: 40px;
-                    @include media(md) {
-                        margin: 0;
-                        text-align: left;
-                    }
-                }
-            }
-            &__img {
-                width: 100%;
-                object-fit: cover;
-            }
-            &__text {
-                @include text(14px, 400, 20px, $secondaryColor);
-                max-width: 290px;
-                margin: 30px 0 30px;
-                @include media(xs) {
-                    @include text(18px, 400, 26px, $secondaryColor);
-                    max-width: 480px;
-                    @include media(sm) {
-                        margin: 30px 0 46px;
-                        @include media(md) {
-                            margin: 18px 0 23px;
-                        }
-                    }
-                }
-            }
-            &__item {
-                @include text(14px, 500, 20px, $secondaryColor);
-                margin-bottom: 20px;
-                margin-left: 35px;
-            }
-            &__item:last-child {
-                margin-bottom: 38px;
-                @include media(sm) {
-                    margin-bottom: 34px;
-                }
-            }
-            &__item-time {
-                position: relative;
-            }
-            &__item-time::before {
-                content: "";
-                background-image: url(../images/info/clock.svg);
-                @include background ();
-                position: absolute;
-                left: -40px;
-                bottom: -5px;
-                width: 32px;
-                height: 32px;
-            }
-            &__item-photo {
-                position: relative;
-            }
-            &__item-photo::before {
-                content: "";
-                background-image: url(../images/info/photo.svg);
-                @include background ();
-                position: absolute;
-                left: -40px;
-                bottom: -5px;
-                width: 32px;
-                height: 32px;
-            }
-            &__item-moskow {
-                position: relative;
-            }
-            &__item-moskow::before {
-                content: "";
-                background-image: url(../images/info/location.svg);
-                @include background ();
-                position: absolute;
-                left: -40px;
-                bottom: -5px;
-                width: 32px;
-                height: 32px;
-            }
-            &__item-dialog {
-                position: relative;
-            }
-            &__item-dialog::before {
-                content: "";
-                background-image: url(../images/info/dialog.svg);
-                @include background ();
-                position: absolute;
-                left: -40px;
-                bottom: -5px;
-                width: 32px;
-                height: 32px;
-            }
-            &__reviews {
-                @include text(14px, 400, 20px, $secondaryColor);
-                position: relative;
-                margin-bottom: 10px;
-                span {
-                    @include text(14px, 500, 20px, $secondaryColor);
-                    @include media(xs) {
-                        @include text(18px, 600, 26px, $secondaryColor);
-                    }
-                }
-                @include media(xs) {
-                    @include text(18px, 400, 26px, $secondaryColor);
-                    margin-bottom: 0;
-                    margin-right: 15px;
-                }
-            }
-            &__reviews::before {
-                content: "";
-                background-image: url(../images/info/groupcup.svg);
-                @include background ();
-                position: absolute;
-                left: -45px;
-                bottom: -25px;
-                width: 37px;
-                height: 41px;
-                @include media(xs) {
-                    bottom: -7px;
-                }
-            }
-            .info__inner {
-                padding: 15px 0 15px 45px;
-                @include flex (center, $flex-direction: column);
-                @include media(xs) {
-                    padding: 30px 0 30px 45px;
-                    @include flex (left, center, $flex-direction: row);
-                }
-            }
-            .info__reviews-img {
-                width: 118px;
-                height: 17px;
+            @include media(md) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 110px;
+                column-gap: 37px;
             }
         }
+        &__title {
+            @include text(28px, 400, 34px, $secondaryColor);
+            max-width: 195px;
+            margin: 0 auto 15px;
+            text-align: center;
+            @include media(sm) {
+                @include text(40px, 500, 48px, $secondaryColor);
+                max-width: 285px;
+                margin-bottom: 40px;
+                @include media(md) {
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+        }
+        &__img {
+            width: 100%;
+            object-fit: cover;
+        }
+        &__text {
+            @include text(14px, 400, 20px, $secondaryColor);
+            max-width: 290px;
+            margin: 30px 0 30px;
+            @include media(xs) {
+                @include text(18px, 400, 26px, $secondaryColor);
+                max-width: 480px;
+                @include media(sm) {
+                    margin: 30px 0 46px;
+                    @include media(md) {
+                        margin: 18px 0 23px;
+                    }
+                }
+            }
+        }
+        &__item {
+            @include text(14px, 500, 20px, $secondaryColor);
+            margin-bottom: 20px;
+            margin-left: 35px;
+        }
+        &__item:last-child {
+            margin-bottom: 38px;
+            @include media(sm) {
+                margin-bottom: 34px;
+            }
+        }
+        &__item-time {
+            position: relative;
+        }
+        &__item-time::before {
+            content: "";
+            background-image: url(../images/info/clock.svg);
+            @include background ();
+            position: absolute;
+            left: -40px;
+            bottom: -5px;
+            width: 32px;
+            height: 32px;
+        }
+        &__item-photo {
+            position: relative;
+        }
+        &__item-photo::before {
+            content: "";
+            background-image: url(../images/info/photo.svg);
+            @include background ();
+            position: absolute;
+            left: -40px;
+            bottom: -5px;
+            width: 32px;
+            height: 32px;
+        }
+        &__item-moskow {
+            position: relative;
+        }
+        &__item-moskow::before {
+            content: "";
+            background-image: url(../images/info/location.svg);
+            @include background ();
+            position: absolute;
+            left: -40px;
+            bottom: -5px;
+            width: 32px;
+            height: 32px;
+        }
+        &__item-dialog {
+            position: relative;
+        }
+        &__item-dialog::before {
+            content: "";
+            background-image: url(../images/info/dialog.svg);
+            @include background ();
+            position: absolute;
+            left: -40px;
+            bottom: -5px;
+            width: 32px;
+            height: 32px;
+        }
+        &__reiting {
+            padding: 15px 0 15px 45px;
+        }
+    }
