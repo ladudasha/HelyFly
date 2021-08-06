@@ -1053,6 +1053,18 @@ template {
 .ivanova__grid {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+@media (min-width: 1280px) {
+    .ivanova__grid {
+        grid-template-columns: 584px 1fr;
+        grid-template-rows: 1fr 180px;
+        grid-row-gap: 40px;
+        grid-column-gap: 135px;
+        padding-bottom: 50px;
+        border-bottom: 0.5px solid #C7C7C7;
+    }
 }
 
 .ivanova__inner {
@@ -1060,10 +1072,39 @@ template {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@media (min-width: 1280px) {
+    .ivanova__inner {
+        -ms-flex-order: 1;
+        order: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .ivanova__photo {
+        margin-top: 43px;
+        position: relative;
+    }
+}
+
+@media (min-width: 1280px) {
+    .ivanova__photo {
+        margin-top: 55px;
+    }
+}
+
+.ivanova__photo__photo::after {
+    content: "";
+    background-image: url(../images/ivanova/heart.svg);
+    display: block;
+    width: 31px;
+    height: 27px;
+    position: absolute;
+    top: 7px;
+    right: -15px;
 }
 
 .ivanova__img {
@@ -1075,7 +1116,8 @@ template {
     font-weight: 500;
     line-height: 22px;
     color: #37373f;
-    margin-bottom: 7px;
+    margin-bottom: 14px;
+    text-align: left;
 }
 
 .ivanova__photograf {
@@ -1084,4 +1126,57 @@ template {
     font-weight: 400;
     line-height: 21px;
     color: #37373f;
+}
+
+.ivanova__link {
+    max-width: 279px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    .ivanova__link {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .ivanova__link {
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .ivanova__content-two {
+        -ms-flex-order: 1;
+        order: 1;
+    }
+}
+
+.ivanova__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #37373f;
+    margin-bottom: 22px;
+}
+
+.ivanova__text-start {
+    margin-bottom: 40px;
+}
+
+.ivanova__link-read {
+    margin-top: 22px;
+    position: relative;
+}
+
+.ivanova__link-read::after {
+    content: "";
+    background-image: url(../images/photocards/arrow.svg);
+    display: block;
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    top: 7px;
+    right: -15px;
 }
