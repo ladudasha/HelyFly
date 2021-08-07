@@ -1,0 +1,10 @@
+.maps {
+    .container {
+        @extend %container;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,7 +1,6 @@
     .rating {
         @include flex (center, $flex-direction: column);
         @include media(xs) {
-            padding: 30px 0 30px 45px;
             @include flex (flex-start, center, $flex-direction: row);
         }
         &__reviews {

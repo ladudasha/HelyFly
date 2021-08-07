@@ -1,0 +1,72 @@
+.time {
+    padding-top: 40px;
+    .container {
+        @extend %container;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        @include media(md) {
+            max-width: 770px;
+        }
+    }
+    &__title {
+        max-width: 278px;
+        margin: 0 auto 40px;
+        @include media(sm) {
+            @include text(20px, 500, 29px, $secondaryColor);
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+        @include media(md) {
+            @include text(28px, 500, 41px, $secondaryColor);
+            max-width: 337px;
+        }
+        @include media(lg) {
+            @include text(20px, 500, 29px, $secondaryColor);
+        }
+    }
+    &__text-friday {
+        @include text(18px, 400, 26px, $secondaryColor);
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 0.5px solid #C7C7C7;
+        border-top: 0.5px solid #C7C7C7;
+    }
+    &__rating {
+        padding: 30px 0 30px 45px;
+        border-bottom: 0.5px solid #C7C7C7;
+        border-top: 0.5px solid #C7C7C7;
+        @include media(sm) {
+            padding: 50px 0 30px 50px;
+        }
+    }
+    &__inner {
+        padding: 16px 15px 30px;
+        display: flex;
+        flex-direction: column;
+        @include media(xs) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__inner-one {
+            border-bottom: 0.5px solid #C7C7C7;
+        }
+    }
+    &__text {
+        margin-bottom: 10px;
+    }
+    &__text-bold {
+        @include text (18px, 600, 26px, $secondaryColor);
+    }
+    &__btn {
+        @include text (14px, 500, 17px, $accentColor);
+        border: 2px solid #FC9B09;
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: 130px;
+        height: 50px;
+        margin-top: 20px;
+    }
+}

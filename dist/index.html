@@ -11,7 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.min.css">
-
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <title>HelyFly</title>
 </head>
 
@@ -90,12 +94,12 @@
                         <li class="info__item info__item-dialog">Готовы ответить на любые вопросы</li>
                     </ul>
 
-                    <hr>
+
                     <div class="info__rating rating">
                         <p class="rating__reviews">Более <span>150</span> отзывов с оценкой</p>
                         <img class="rating__reviews-img" src="./assets/images/info/stars.svg" alt="stars">
                     </div>
-                    <hr>
+
 
                 </div>
             </div>
@@ -142,17 +146,17 @@
     <section class="ivanova">
         <div class="container">
             <div class="ivanova__grid">
-                <div class="ivanova__inner">
+                <div class="ivanova__inner photographer">
 
-                    <div class="ivanova__photo">
-                        <img class="ivanova__img" src="./assets/images/ivanova/ivanova.png" alt="ivanova">
+                    <div class="photographer__photo">
+                        <img class="photographer__img" src="./assets/images/ivanova/ivanova.png" alt="ivanova">
                     </div>
 
-                    <h3 class="ivanova__title title">Марина Иванова</h3>
+                    <h3 class="photographer__title title">Марина Иванова</h3>
 
-                    <p class="ivanova__photograf">Фотограф</p>
+                    <p class="photographer__photograf">Фотограф</p>
 
-                    <a class="ivanova__link link" href="#">Показать больше 
+                    <a class="photographer__link link" href="#">Показать больше 
                         информации о фотографе</a>
                 </div>
 
@@ -183,57 +187,124 @@
 
     <section class="time">
         <div class="container">
+            <h2 class="time__title title"> Доступная съемка в ближайшее время</h2>
             <div class="time__wrapper">
 
-                <h2 class="time__title litle">Доступная съемка в ближайщее время</h2>
-                <p class="time__text">Пятница, 14 сентября</p>
+
+                <p class="time__text-friday text">Пятница, 14 сентября</p>
 
                 <div class="time__inner time__inner-one">
-
                     <div class="time__box time__box-one">
 
-                        <p class="time__text text"></p>
+                        <p class="time__text text">15:00 - 18:00</p>
 
-                        <p class="time__text time__text-cost"></p>
+                        <p class="time__text text time__text-bold">850$</p>
 
-                        <p class="time__text"></p>
-
-                        <div class="time__btn">
-                            <button></button>
-                        </div>
-
+                        <p class="time__text text">Осталось — 1 место</p>
                     </div>
+
+                    <button class="time__btn">Выбрать</button>
+
                 </div>
 
+                <div class="time__inner">
+                    <div class="time__box time__box-one">
 
-                <div class="time__inner time__inner-two">
-                    <div class="time__box time__box-two">
+                        <p class="time__text text">19:00 - 20:00</p>
 
-                        <p></p>
+                        <p class="time__text text time__text-bold">850$</p>
 
-                        <p></p>
-
-                        <p></p>
-
-                        <div class="btn">
-                            <button></button>
-                        </div>
-
+                        <p class="time__text text">Осталось — 1 место</p>
                     </div>
+
+                    <button class="time__btn">Выбрать</button>
+
                 </div>
 
-                <div class="time__rating rating">
-                    <p class="rating__reviews">Более <span>150</span> отзывов с оценкой</p>
-                    <img class="rating__reviews-img" src="./assets/images/info/stars.svg" alt="stars">
-                </div>
 
-
-
-
+            </div>
+            <div class="time__rating rating">
+                <p class="rating__reviews">Более <span>150</span> отзывов с оценкой</p>
+                <img class="rating__reviews-img" src="./assets/images/info/stars.svg" alt="stars">
             </div>
         </div>
     </section>
 
+    <section class="maps">
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.0555049193304!2d37.616999316046574!3d55.757537999094104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b25eb3113%3A0xb1476fcc67b0de30!2z0KLQtdCw0YLRgNCw0LvRjNC90LDRjw!5e0!3m2!1sru!2sby!4v1628338424512!5m2!1sru!2sby"
+                width="100%" height="510px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <div class="maps__slider">
+
+                <div class="maps__number">
+                    <p>1</p>
+                </div>
+
+                <div class="maps__number">
+                    <p>2</p>
+                </div>
+
+                <div class="maps__number">
+                    <p>3</p>
+                </div>
+
+
+            </div>
+
+
+
+            <p class="maps__meet">Где встречаемся?</p>
+            <p class="maps__sity">Москва</p>
+            <div class="dot"></div>
+
+            <div class="maps__inner photographer">
+
+                <div class="photographer__photo">
+                    <img class="photographer__img" src="./assets/images/ivanova/ivanova.png" alt="ivanova">
+                </div>
+
+                <h3 class="photographer__title title">Марина Иванова</h3>
+
+                <p class="photographer__photograf">Фотограф</p>
+
+                <a class="photographer__link link" href="#">Показать больше 
+                    информации о фотографе</a>
+            </div>
+
+
+            <!-- <div class="your-class">
+                    <div>
+                        <p class="maps__meet">Где встречаемся?</p>
+                        <p class="maps__sity">Москва</p>
+                    </div>
+                    <div>
+                        <p class="maps__meet">Где встречаемся?</p>
+                        <p class="maps__sity">Москва</p>
+                    </div>
+                    <div>
+                        <p class="maps__meet">Где встречаемся?</p>
+                        <p class="maps__sity">Москва</p>
+                    </div>
+                </div> -->
+
+
+
+        </div>
+    </section>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script> -->
+
+
+
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/script.js"></script> -->
 
 
 
