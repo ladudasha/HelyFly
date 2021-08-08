@@ -1,13 +1,12 @@
-$(document).ready(function() {
-    $('.maps__slider').slick({
-        dots: true
-    });
-
-
+var swiper = new Swiper(".mySwiper", {
+    cssMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
 });
-
-// $(document).ready(function() {
-//     $('.maps__slider').slick({
-//         setting - name: setting - value
-//     });
-// });
