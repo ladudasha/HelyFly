@@ -1171,6 +1171,10 @@ template {
     }
 }
 
+.ivanova__title {
+    margin-bottom: 25px;
+}
+
 .ivanova__text {
     font-size: 16px;
     font-weight: 400;
@@ -1213,6 +1217,7 @@ template {
 @media (min-width: 1280px) {
     .time__wrapper {
         max-width: 770px;
+        border-right: 0.5px solid #C7C7C7;
     }
 }
 
@@ -1266,7 +1271,6 @@ template {
 .time__rating {
     padding: 30px 0 30px 45px;
     border-bottom: 0.5px solid #C7C7C7;
-    border-top: 0.5px solid #C7C7C7;
 }
 
 @media (min-width: 768px) {
@@ -1281,6 +1285,7 @@ template {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
+    border-bottom: 0.5px solid #C7C7C7;
 }
 
 @media (min-width: 576px) {
@@ -1320,6 +1325,17 @@ template {
     margin-top: 20px;
 }
 
+.maps {
+    position: relative;
+    padding-top: 45px;
+}
+
+.maps__block {
+    position: absolute;
+    top: 68px;
+    left: 50px;
+}
+
 .maps__inner {
     display: -ms-flexbox;
     display: flex;
@@ -1329,10 +1345,75 @@ template {
     align-items: center;
 }
 
+.maps__block {
+    padding-top: 50px;
+    padding-left: 30px;
+    display: none;
+    width: 420px;
+    height: 470px;
+    background-color: white;
+}
+
+@media (min-width: 1280px) {
+    .maps__block {
+        display: block;
+    }
+}
+
+.slider__box {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.slider__text-bold {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #FC9B09;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 51px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 18px;
+}
+
+.slider__text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.slider__meet {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: #37373f;
+}
+
+.slider__sity {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #37373f;
+}
+
 .swiper-container {
-    max-width: 380px;
+    max-width: 270px;
     width: 100%;
-    min-height: 250px;
+    min-height: 220px;
     padding-bottom: 15px;
 }
 

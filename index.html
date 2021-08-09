@@ -13,11 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-
-
     <title>HelyFly</title>
-
-
 
 </head>
 
@@ -65,7 +61,7 @@
 
                     </div>
                     <p class="main__price-percent">%</p>
-                    <!-- <img class="main__price-percent" src="./assets/images/main/percent.svg" alt="percent"> -->
+
                 </div>
 
                 <button class="main__btn">Забронировать место</button>
@@ -233,19 +229,43 @@
     </section>
 
     <section class="maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.0555049193304!2d37.616999316046574!3d55.757537999094104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b25eb3113%3A0xb1476fcc67b0de30!2z0KLQtdCw0YLRgNCw0LvRjNC90LDRjw!5e0!3m2!1sru!2sby!4v1628338424512!5m2!1sru!2sby"
+        <iframe class="maps__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.0555049193304!2d37.616999316046574!3d55.757537999094104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b25eb3113%3A0xb1476fcc67b0de30!2z0KLQtdCw0YLRgNCw0LvRjNC90LDRjw!5e0!3m2!1sru!2sby!4v1628338424512!5m2!1sru!2sby"
             width="100%" height="510px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>;
         <div class="container">
 
+            <div class="maps__block slider">
+                <div class="slider__box ">
+                    <p class="slider__text-bold">1</p>
+                    <div class="slider__text text">
+                        <p class="slider__meet">Где встречаемся?</p>
+                        <p class="slider__sity">Москва</p>
+                    </div>
+                </div>
 
+                <div class="slider__box">
+                    <p class="slider__text-bold">2</p>
+                    <div class="slider__text text">
+                        <p class="slider__meet">Время съемки</p>
+                        <p class="slider__sity">3 часа</p>
+                    </div>
+                </div>
+
+
+                <div class="slider__box">
+                    <p class="slider__text-bold">3</p>
+                    <div class="slider__text text">
+                        <p class="slider__meet">Мест осталось:</p>
+                        <p class="slider__sity">2 места</p>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="maps__wrapper">
-
                 <div class="swiper-container mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"> 1
-                            <div class="swiper-text">
+                        <div class="swiper-slide "> 1
+                            <div class="swiper-text text">
                                 <p class="maps__meet">Где встречаемся?</p>
                                 <p class="maps__sity">Москва</p>
                             </div>
@@ -258,7 +278,6 @@
                             </div>
                         </div>
 
-
                         <div class="swiper-slide"> 3
                             <div class="swiper-text">
                                 <p class="maps__meet">Мест осталось:</p>
@@ -266,15 +285,11 @@
                             </div>
                         </div>
 
-
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-
-
-
 
 
                 <div class="maps__inner photographer">
