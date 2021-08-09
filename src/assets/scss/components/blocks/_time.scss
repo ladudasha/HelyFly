@@ -8,6 +8,8 @@
         flex-direction: column;
         @include media(md) {
             max-width: 770px;
+            border-right: 0.5px solid #C7C7C7;
+            ;
         }
     }
     &__title {
@@ -37,7 +39,6 @@
     &__rating {
         padding: 30px 0 30px 45px;
         border-bottom: 0.5px solid #C7C7C7;
-        border-top: 0.5px solid #C7C7C7;
         @include media(sm) {
             padding: 50px 0 30px 50px;
         }
@@ -46,6 +47,7 @@
         padding: 16px 15px 30px;
         display: flex;
         flex-direction: column;
+        border-bottom: 0.5px solid #C7C7C7;
         @include media(xs) {
             flex-direction: row;
             justify-content: space-between;

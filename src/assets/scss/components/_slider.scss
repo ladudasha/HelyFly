@@ -1,0 +1,30 @@
+.slider {
+    &__box {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    &__text-bold {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background: #FC9B09;
+        @include text(35px, 700, 51px, $primaryColor);
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 18px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__meet {
+        @include text(18px, 500, 27px, $secondaryColor);
+    }
+    &__sity {
+        @include text(18px, 400, 25px, $secondaryColor);
+    }
+}
