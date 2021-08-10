@@ -1088,6 +1088,17 @@ template {
     right: -85px;
 }
 
+.photographer__flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .photographer__img {
     margin-bottom: 23px;
 }
@@ -1148,7 +1159,7 @@ template {
     }
 }
 
-.ivanova__inner {
+.ivanova__photographer {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1158,7 +1169,7 @@ template {
 }
 
 @media (min-width: 1280px) {
-    .ivanova__inner {
+    .ivanova__photographer {
         -ms-flex-order: 1;
         order: 1;
     }
@@ -1173,6 +1184,10 @@ template {
 
 .ivanova__title {
     margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #37373f;
 }
 
 .ivanova__text {
@@ -1330,22 +1345,10 @@ template {
     padding-top: 45px;
 }
 
-.maps__block {
+.maps__slider {
     position: absolute;
     top: 68px;
     left: 50px;
-}
-
-.maps__inner {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.maps__block {
     padding-top: 50px;
     padding-left: 30px;
     display: none;
@@ -1355,9 +1358,25 @@ template {
 }
 
 @media (min-width: 1280px) {
-    .maps__block {
+    .maps__slider {
         display: block;
     }
+}
+
+.maps__slider__photographercard {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.maps__photographer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .slider__box {

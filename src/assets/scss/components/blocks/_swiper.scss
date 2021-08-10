@@ -3,10 +3,19 @@
     width: 100%;
     min-height: 220px;
     padding-bottom: 15px;
+    // bottom: 40px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
 .swiper-pagination-bullet {
     background-color: #FC9B09 !important;
+    // margin-bottom: 20px;
 }
 
 .swiper-button-next::after {
