@@ -806,6 +806,12 @@ template {
     top: 0px;
     right: -85px; }
 
+.photographer__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .photographer__img {
   margin-bottom: 23px; }
 
@@ -849,12 +855,12 @@ template {
         grid-column-gap: 135px;
         padding-bottom: 50px;
         border-bottom: 0.5px solid #C7C7C7; } }
-  .ivanova__inner {
+  .ivanova__photographer {
     display: flex;
     flex-direction: column;
     align-items: center; }
     @media (min-width: 1280px) {
-      .ivanova__inner {
+      .ivanova__photographer {
         order: 1; } }
   @media (min-width: 1280px) {
     .ivanova__content-two {
@@ -968,15 +974,10 @@ template {
 .maps {
   position: relative;
   padding-top: 45px; }
-  .maps__block {
+  .maps__slider {
     position: absolute;
     top: 68px;
-    left: 50px; }
-  .maps__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  .maps__block {
+    left: 50px;
     padding-top: 50px;
     padding-left: 30px;
     display: none;
@@ -984,8 +985,20 @@ template {
     height: 470px;
     background-color: white; }
     @media (min-width: 1280px) {
-      .maps__block {
+      .maps__slider {
         display: block; } }
+    .maps__slider__photographercard {
+      display: flex;
+      align-items: center; }
+  .maps__photographer {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .maps__wrapper {
+    padding: 52px 26px 20px 26px;
+    margin: 0 auto;
+    width: 275px;
+    height: 380px; }
 
 .slider__box {
   display: flex;
@@ -1029,6 +1042,12 @@ template {
   width: 100%;
   min-height: 220px;
   padding-bottom: 15px; }
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center; }
 
 .swiper-pagination-bullet {
   background-color: #FC9B09 !important; }
