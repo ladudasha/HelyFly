@@ -1,11 +1,12 @@
 .photographer {
     &__photo {
+        margin-bottom: 23px;
         position: relative;
         @include media (sm) {
             margin-top: 43px;
         }
         @include media (md) {
-            margin-top: 55px;
+            margin-top: 50px;
         }
         &::after {
             content: "";
@@ -23,9 +24,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    &__img {
-        margin-bottom: 23px;
     }
     &__title {
         @include text (18px, 500, 22px, $secondaryColor);

@@ -1,9 +1,29 @@
 .swiper-container {
     max-width: 270px;
     width: 100%;
-    min-height: 220px;
+    // min-height: 220px;
     padding-bottom: 15px;
-    // bottom: 40px;
+    margin-bottom: 40px;
+    .slider {
+        &__text-bold {
+            width: 66px;
+            height: 66px;
+            @include text(30px, 700, 44px, $primaryColor);
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+        &__text {
+            margin-bottom: 20px;
+        }
+        &__meet {
+            @include text(16px, 500, 23px, $secondaryColor);
+            margin-bottom: 10px;
+        }
+        &__sity {
+            @include text(14px, 400, 20px, $secondaryColor);
+            margin: 0 auto;
+        }
+    }
 }
 
 .swiper-slide {
@@ -39,4 +59,12 @@
 .swiper-container-rtl,
 .swiper-button-prev::after {
     content: ''!important;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
 }
