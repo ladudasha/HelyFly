@@ -1,50 +1,29 @@
 .maps {
-    position: relative;
     padding-top: 45px;
     .container {
         @extend %container;
     }
     &__map {
+        position: relative;
         margin-bottom: 52px;
-    }
-    &__slider {
-        position: absolute;
-        top: 68px;
-        left: 50px;
-        padding-top: 50px;
-        padding-left: 30px;
-        display: none;
-        width: 420px;
-        // height: 470px;
-        background-color: white;
-        @include media(md) {
-            display: block;
-        }
-        &__photographercard {
-            display: flex;
-            align-items: center;
+        @include media (sm) {
+            height: 510px;
         }
     }
+    // &-card {
+    //     position: absolute;
+    // }
     &__wrapper {
         @include media (md) {
             display: none;
         }
-        padding: 52px 25px 20px 25px;
+        padding: 27px 25px 20px 25px;
         margin: 0 auto;
         width: 275px;
     }
     &__photographer {
         display: flex;
         justify-content: center;
-    }
-    &__photographer--left {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    &__photo--left {
-        margin: 0;
-        margin-right: 10px;
     }
     .photographer {
         &__photo {
@@ -62,17 +41,11 @@
             height: 67px;
         }
         &__flex {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: flex-start;
         }
         &__title {
             @include text (16px, 500, 20px, $secondaryColor);
             margin-bottom: 5px;
-            // min-height: 20px;
-            text-align: left;
-            // max-width: 135px;
         }
         &__photograf {
             margin-bottom: 7px;
@@ -89,5 +62,17 @@
                 margin-bottom: 0px;
             }
         }
+    }
+    &__card {
+        position: absolute;
+        top: 65px;
+        left: 65px;
+        width: 420px;
+        height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: white;
+        padding: 50px 0 55px 30px;
     }
 }

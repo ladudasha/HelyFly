@@ -7,24 +7,28 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60px;
-        height: 60px;
+        width: 66px;
+        height: 66px;
         background: #FC9B09;
-        @include text(35px, 700, 51px, $primaryColor);
+        @include text(30px, 700, 44px, $primaryColor);
         border-radius: 50%;
         text-align: center;
-        margin-right: 18px;
+        margin-bottom: 20px;
+        margin-right: 0;
     }
     &__text {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
     }
     &__meet {
-        @include text(18px, 500, 27px, $secondaryColor);
+        @include text(16px, 500, 23px, $secondaryColor);
+        margin-bottom: 10px;
     }
-    &__sity {
-        @include text(18px, 400, 26px, $secondaryColor);
+    &__city {
+        @include text(14px, 400, 20px, $secondaryColor);
+        text-align: center;
     }
 }

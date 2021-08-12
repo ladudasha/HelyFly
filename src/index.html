@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.min.css">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css">
 
     <title>HelyFly</title>
 
@@ -20,7 +21,7 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container ">
 
             <div class="header__inner">
 
@@ -236,71 +237,11 @@
     <section class="maps">
         <iframe class="maps__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.0555049193304!2d37.616999316046574!3d55.757537999094104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5b25eb3113%3A0xb1476fcc67b0de30!2z0KLQtdCw0YLRgNCw0LvRjNC90LDRjw!5e0!3m2!1sru!2sby!4v1628338424512!5m2!1sru!2sby"
             width="100%" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe>;
-        <div class="container">
-
-            <div class="maps__slider slider">
-                <div class="slider__box ">
-                    <p class="slider__text-bold">1</p>
-                    <div class="sliderd__text text">
-                        <p class="slider__meet">Где встречаемся?</p>
-                        <p class="slider__sity">Москва</p>
-                    </div>
-                </div>
-
-                <div class="slider__box">
-                    <p class="slider__text-bold">2</p>
-                    <div class="slider__text text">
-                        <p class="slider__meet">Время съемки</p>
-                        <p class="slider__sity">3 часа</p>
-                    </div>
-                </div>
-
-
-                <div class="slider__box">
-                    <p class="slider__text-bold">3</p>
-                    <div class="slider__text text">
-                        <p class="slider__meet">Мест осталось:</p>
-                        <p class="slider__sity">2 места</p>
-                    </div>
-                </div>
 
 
 
 
-                <div class="maps__photographer maps__photographer--left photographer ">
-
-                    <div class="photographer__photo--left">
-                        <img class="photographer__img" src="./assets/images/ivanova/ivanova.png" alt="ivanova">
-                    </div>
-
-
-                    <div class="photographer__flex">
-                        <h3 class="photographer__title title">Марина Иванова</h3>
-
-                        <p class="photographer__photograf">Фотограф</p>
-
-                        <a class="photographer__link link" href="#">Показать больше 
-                        информации о фотографе</a>
-                    </div>
-
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
+        <div class="container container-card">
 
 
             <div class="maps__wrapper">
@@ -310,7 +251,7 @@
                             <p class="slider__text-bold ">1</p>
                             <div class="slider__text text">
                                 <p class="slider__meet">Где встречаемся?</p>
-                                <p class="slider__sity">Москва</p>
+                                <p class="slider__city">Москва</p>
                             </div>
                         </div>
 
@@ -318,7 +259,7 @@
                             <p class="slider__text-bold">2</p>
                             <div class="slider-text">
                                 <p class="slider__meet">Время съемки</p>
-                                <p class="slider__sity">3 часа</p>
+                                <p class="slider__city">3 часа</p>
                             </div>
                         </div>
 
@@ -326,7 +267,7 @@
                             <p class="slider__text-bold">3</p>
                             <div class="slider-text">
                                 <p class="slider__meet">Мест осталось:</p>
-                                <p class="slider__sity">2 места</p>
+                                <p class="slider__city">2 места</p>
                             </div>
                         </div>
 
@@ -336,9 +277,55 @@
                     <div class="swiper-pagination"></div>
                 </div>
 
+                <div class="maps__photographer photographer">
+
+                    <div class="photographer__photo">
+                        <img class="photographer__img" src="./assets/images/ivanova/ivanova.png" alt="ivanova">
+                    </div>
+
+                    <div class="photographer__flex">
+                        <h3 class="photographer__title title">Марина Иванова</h3>
+                        <p class="photographer__photograf">Фотограф</p>
+                        <a class="photographer__link link" href="#">Показать больше 
+                        информации о фотографе</a>
+                    </div>
+
+                </div>
+            </div>
 
 
-                <div class="maps__photographer photographer ">
+
+            <div class="maps__card card">
+
+
+                <div class="card__slider slider">
+                    <div class="slider__box">
+                        <p class="slider__text-bold ">1</p>
+                        <div class="slider__text text">
+                            <p class="slider__meet meet">Где встречаемся?</p>
+                            <p class="slider__city ">Москва</p>
+                        </div>
+                    </div>
+
+                    <div class="slider__box">
+                        <p class="slider__text-bold">2</p>
+                        <div class="slider__text text">
+                            <p class="slider__meet">Время съемки</p>
+                            <p class="slider__city">3 часа</p>
+                        </div>
+                    </div>
+
+
+                    <div class="slider__box">
+                        <p class="slider__text-bold">3</p>
+                        <div class="slider__text text">
+                            <p class="slider__meet">Мест осталось:</p>
+                            <p class="slider__city">2 места</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card__photographer photographer">
 
                     <div class="photographer__photo">
                         <img class="photographer__img" src="./assets/images/ivanova/ivanova.png" alt="ivanova">
@@ -351,14 +338,14 @@
                         <p class="photographer__photograf">Фотограф</p>
 
                         <a class="photographer__link link" href="#">Показать больше 
-                        информации о фотографе</a>
+                        информации</a>
                     </div>
 
-
                 </div>
-
             </div>
+
         </div>
+
     </section>
 
 
