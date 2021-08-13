@@ -23,11 +23,11 @@
         align-items: center;
         margin-bottom: 20px;
     }
-    &__meet {
+    &__text-one {
         @include text(16px, 500, 23px, $secondaryColor);
         margin-bottom: 10px;
     }
-    &__city {
+    &__text-two {
         @include text(14px, 400, 20px, $secondaryColor);
         text-align: center;
     }

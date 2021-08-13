@@ -374,25 +374,25 @@ template {
     display: none;
 }
 
-.header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .maps .container {
+.header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .map .container {
     width: 100%;
     padding: 0 15px;
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .maps .container {
+    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .map .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .maps .container {
+    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .map .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .maps .container {
+    .header .container, .main .container, .info .container, .photocards .container, .ivanova .container, .time .container, .map .container {
         max-width: 1140px;
         padding: 0;
         margin: 0 auto;
@@ -1060,24 +1060,24 @@ template {
     right: -15px;
 }
 
-.photographer__photo {
+.human__photo {
     margin-bottom: 20px;
     position: relative;
 }
 
 @media (min-width: 768px) {
-    .photographer__photo {
+    .human__photo {
         margin-top: 43px;
     }
 }
 
 @media (min-width: 1280px) {
-    .photographer__photo {
+    .human__photo {
         margin-top: 50px;
     }
 }
 
-.photographer__photo::after {
+.human__photo::after {
     content: "";
     background-image: url(../images/ivanova/heart.svg);
     display: block;
@@ -1088,7 +1088,7 @@ template {
     right: -85px;
 }
 
-.photographer__flex {
+.human__flex {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1099,16 +1099,16 @@ template {
     align-items: center;
 }
 
-.photographer__title {
+.human__title {
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
     color: #37373f;
     margin-bottom: 14px;
-    text-align: left;
+    text-align: center;
 }
 
-.photographer__photograf {
+.human__photographer {
     margin-bottom: 7px;
     font-size: 14px;
     font-weight: 400;
@@ -1116,20 +1116,24 @@ template {
     color: #37373f;
 }
 
-.photographer__link {
-    max-width: 279px;
+.human__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #5286ec;
+    max-width: 225px;
     text-align: center;
     margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
-    .photographer__link {
+    .human__link {
         margin-bottom: 30px;
     }
 }
 
 @media (min-width: 1280px) {
-    .photographer__link {
+    .human__link {
         margin-bottom: 0px;
     }
 }
@@ -1155,7 +1159,7 @@ template {
     }
 }
 
-.ivanova__photographer {
+.ivanova__human {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1165,7 +1169,7 @@ template {
 }
 
 @media (min-width: 1280px) {
-    .ivanova__photographer {
+    .ivanova__human {
         -ms-flex-order: 1;
         order: 1;
     }
@@ -1336,103 +1340,40 @@ template {
     margin-top: 20px;
 }
 
-.maps {
-    position: relative;
+.map {
     padding-top: 45px;
+    position: relative;
 }
 
-.maps__map {
+.map__map {
     margin-bottom: 52px;
 }
 
 @media (min-width: 768px) {
-    .maps__map {
+    .map__map {
         height: 510px;
     }
 }
 
-.maps__wrapper {
-    padding: 27px 25px 20px 25px;
+.map .container__card {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.map__wrapper {
+    padding: 24px 20px 20px 20px;
     margin: 0 auto;
     width: 275px;
 }
 
 @media (min-width: 1280px) {
-    .maps__wrapper {
+    .map__wrapper {
         display: none;
     }
 }
 
-.maps__photographer {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.maps .photographer__photo {
-    margin-top: 0;
-    margin-right: 10px;
-}
-
-@media (min-width: 1280px) {
-    .maps .photographer__photo {
-        margin-top: 50px;
-    }
-}
-
-.maps .photographer__photo::after {
-    display: none;
-}
-
-.maps .photographer__img {
-    width: 67px;
-    height: 67px;
-}
-
-.maps .photographer__flex {
-    -ms-flex-align: start;
-    align-items: flex-start;
-}
-
-.maps .photographer__title {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #37373f;
-    margin-bottom: 5px;
-}
-
-.maps .photographer__photograf {
-    margin-bottom: 7px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    color: #37373f;
-}
-
-.maps .photographer__link {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 21px;
-    color: #5286ec;
-    max-width: 155px;
-    text-align: left;
-}
-
-@media (min-width: 768px) {
-    .maps .photographer__link {
-        margin-bottom: 30px;
-    }
-}
-
-@media (min-width: 1280px) {
-    .maps .photographer__link {
-        margin-bottom: 0px;
-    }
-}
-
-.maps__card {
+.map__card {
     position: absolute;
     top: 65px;
     left: 65px;
@@ -1481,12 +1422,12 @@ template {
     flex-direction: column;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.slider__meet {
+.slider__text-one {
     font-size: 16px;
     font-weight: 500;
     line-height: 23px;
@@ -1494,7 +1435,7 @@ template {
     margin-bottom: 10px;
 }
 
-.slider__city {
+.slider__text-two {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -1506,9 +1447,11 @@ template {
     max-width: 100%;
     width: 100%;
     margin-bottom: 40px;
+    min-height: 163px;
 }
 
 .swiper-slide {
+    width: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -1519,22 +1462,22 @@ template {
 }
 
 .swiper-pagination-bullet {
-    background-color: #FC9B09 !important;
+    background-color: #FC9B09;
 }
 
 .swiper-button-next::after {
     background-image: url(../images/maps/arrow-swiper.svg);
     background-size: contain;
-    width: 19px;
-    height: 10px;
+    width: 26px;
+    height: 21px;
     background-repeat: no-repeat;
 }
 
 .swiper-button-prev::after {
     background-image: url(../images/maps/arrow-swiper.svg);
     background-size: contain;
-    width: 19px;
-    height: 10px;
+    width: 26px;
+    height: 21px;
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     background-repeat: no-repeat;
@@ -1543,18 +1486,29 @@ template {
 .swiper-button-next::after,
 .swiper-container-rtl,
 .swiper-button-prev::after {
-    position: absolute;
-    top: 25%;
     content: "" !important;
+    position: absolute;
+    right: 0px;
+    top: -30px;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
     position: absolute;
-    bottom: 0px;
-    left: 0;
+    bottom: -5px;
+    left: -5px;
     width: 100%;
+}
+
+.swiper-button-next {
+    position: absolute;
+    right: -15px;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: -15px;
 }
 
 .card {
@@ -1594,9 +1548,11 @@ template {
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-bottom: 0px;
+    -ms-flex-align: start;
+    align-items: flex-start;
 }
 
-.card .slider__meet {
+.card .slider_text-one {
     font-size: 18px;
     font-weight: 500;
     line-height: 27px;
@@ -1604,7 +1560,7 @@ template {
     margin-bottom: 10px;
 }
 
-.card .slider__city {
+.card .slider__text-two {
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
