@@ -1,12 +1,6 @@
 .map {
     padding-top: 45px;
     position: relative;
-    &__map {
-        margin-bottom: 52px;
-        @include media (sm) {
-            height: 510px;
-        }
-    }
     .container {
         @extend %container;
         &__card {
@@ -15,53 +9,30 @@
             left: 0;
         }
     }
+    &__map {
+        margin-bottom: 52px;
+        @include media (sm) {
+            height: 510px;
+        }
+    }
     &__wrapper {
         @include media (md) {
             display: none;
         }
-        padding: 24px 20px 20px 20px;
+        padding: 52px 16px 14px 16px;
         margin: 0 auto;
         width: 275px;
+        border:1px solid #C7C7C7;
+        @include media (xs) {
+            width: 400px;
+            padding: 52px 80px 14px 80px;
+        }
     }
-    //       
-    // .human {
-    //     &__photo {
-    //         margin-top: 0;
-    //         margin-right: 10px;
-    //         @include media (md) {
-    //             margin-top: 50px;
-    //         }
-    //         &::after {
-    //             display: none;
-    //         }
-    //     }
-    //     &__img {
-    //         width: 67px;
-    //         height: 67px;
-    //     }
-    //     &__flex {
-    //         align-items: flex-start;
-    //     }
-    //     &__title {
-    //         @include text (16px, 500, 20px, $secondaryColor);
-    //         margin-bottom: 5px;
-    //     }
-    //     &__photografer {
-    //         margin-bottom: 7px;
-    //         @include text (14px, 400, 21px, $secondaryColor);
-    //     }
-    //     &__link {
-    //         @include text (14px, 500, 21px, $linkColor);
-    //         max-width: 155px;
-    //         text-align: left;
-    //         @include media (sm) {
-    //             margin-bottom: 30px;
-    //         }
-    //         @include media (md) {
-    //             margin-bottom: 0px;
-    //         }
-    //     }
-    // }
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
     &__card {
         position: absolute;
         top: 65px;
@@ -72,6 +43,6 @@
         flex-direction: column;
         justify-content: flex-start;
         background-color: white;
-        padding: 50px 0 55px 30px;
+        padding: 50px 30px;
     }
 }

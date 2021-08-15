@@ -1,0 +1,31 @@
+.block {
+    display: flex;
+    justify-content: flex-start;
+    &__inner {
+        margin-top: 0;
+        margin-right: 10px;
+    }
+    &__img {
+        width: 67px;
+        height: 67px;
+    }
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__title {
+        @include text (16px, 500, 20px, $secondaryColor);
+        margin-bottom: 5px;
+    }
+    &__photografer {
+        margin-bottom: 7px;
+        @include text (14px, 400, 21px, $secondaryColor);
+    }
+    &__link {
+        // @include text (14px, 500, 21px, $linkColor);
+        max-width: 230px;
+        text-align: left;
+    }
+}

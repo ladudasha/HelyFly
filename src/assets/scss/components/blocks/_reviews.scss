@@ -1,0 +1,28 @@
+.reviews {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    .container {
+        @extend %container;
+    }
+    &__title {
+        @include text (26px, 400, 39px, $secondaryColor);
+        text-align: center;
+        margin-bottom: 55px;
+        @include media (xs) {
+            margin-bottom: 50px;
+        }
+        @include media (sm) {
+            @include text (20px, 500, 30px, $secondaryColor);
+            text-align: left;
+        }
+        @include media (md) {
+            @include text (28px, 500, 41px, $secondaryColor);
+        }
+        @include media (lg) {
+            @include text (20px, 500, 39px, $secondaryColor);
+        }
+    }
+    &__wrapper {
+        display: flex;
+    }
+}

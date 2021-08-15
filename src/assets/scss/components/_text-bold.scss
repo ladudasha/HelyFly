@@ -1,0 +1,5 @@
+.text-bold {
+    @include flex (center, center);
+    background: #FC9B09;
+    border-radius: 50%;
+}
