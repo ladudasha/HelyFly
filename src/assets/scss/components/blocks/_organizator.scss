@@ -1,4 +1,4 @@
-.ivanova {
+.organizator {
     padding-top: 65px;
     .container {
         @extend %container;
@@ -16,24 +16,28 @@
             border-bottom: 0.5px solid #C7C7C7;
         }
     }
-    &__human {
-        display: flex;
+    &__photographer {
+        // display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         @include media (md) {
             order: 1;
         }
+    }
+    &__photo {
+        width: 140px;
+        height: 140px;
     }
     &__content-two {
         @include media (md) {
             order: 1;
         }
     }
-    &__title {
+    &__name {
         margin-bottom: 25px;
         @include text (18px, 500, 26px, $secondaryColor);
     }
-    &__text {
+    &__prof {
         @include text (16px, 400, 24px, $secondaryColor);
         margin-bottom: 22px;
     }
