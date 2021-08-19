@@ -706,23 +706,27 @@ template {
         text-align: left;
         margin-bottom: 30px;
         margin-left: 0;
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 500;
-        line-height: 41px;
+        line-height: 30px;
         color: #37373f;
         max-width: 315px; } }
     @media (min-width: 1280px) {
       .photocards__title {
-        max-width: 220px;
-        font-size: 20px;
+        max-width: 300px;
+        font-size: 28px;
         font-weight: 500;
-        line-height: 30px;
+        line-height: 41px;
         color: #37373f;
         margin-bottom: 50px; } }
     @media (min-width: 1440px) {
       .photocards__title {
         margin-bottom: 37px;
-        max-width: 219px; } }
+        max-width: 219px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color: #37373f; } }
   .photocards__grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -785,12 +789,25 @@ template {
     right: -15px; }
 
 .photographer {
-  display: flex;
-  align-items: center; }
+  display: flex; }
   .photographer__img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%; }
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; }
+  .photographer__name {
+    margin-bottom: 7px; }
+  .photographer__prof {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #37373f; }
+  .photographer__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #5286ec; }
 
 .organizator {
   padding-top: 65px; }
@@ -803,36 +820,78 @@ template {
         grid-template-columns: 584px 1fr;
         grid-template-rows: 1fr 180px;
         grid-row-gap: 40px;
-        grid-column-gap: 135px;
+        grid-column-gap: 45px;
         padding-bottom: 50px;
         border-bottom: 0.5px solid #C7C7C7; } }
   .organizator__photographer {
+    align-items: center;
     flex-direction: column; }
     @media (min-width: 1280px) {
       .organizator__photographer {
         order: 1; } }
   .organizator__photo {
+    position: relative;
+    min-width: 140px;
     width: 140px;
-    height: 140px; }
-  @media (min-width: 1280px) {
-    .organizator__content-two {
-      order: 1; } }
+    height: 140px;
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .organizator__photo {
+        margin-top: 43px; } }
+    @media (min-width: 1280px) {
+      .organizator__photo {
+        margin-top: 50px; } }
+  .organizator__photo::after {
+    content: "";
+    background-image: url(../images/organizator/heart.svg);
+    display: block;
+    width: 31px;
+    height: 27px;
+    position: absolute;
+    top: -10px;
+    right: -80px; }
+  .organizator__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   .organizator__name {
-    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #37373f;
+    text-align: center; }
+  .organizator__link {
+    max-width: 225px;
+    text-align: center;
+    margin-bottom: 15px; }
+    @media (min-width: 768px) {
+      .organizator__link {
+        margin-bottom: 30px; } }
+    @media (min-width: 1280px) {
+      .organizator__link {
+        margin-bottom: 0px; } }
+  .organizator__content-first {
+    margin-bottom: 30px; }
+    @media (min-width: 576px) {
+      .organizator__content-first {
+        margin-bottom: 40px; } }
+  .organizator__title {
     font-size: 18px;
     font-weight: 500;
     line-height: 26px;
-    color: #37373f; }
-  .organizator__prof {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
     color: #37373f;
+    margin-bottom: 14px; }
+  .organizator__text {
+    text-align: left;
     margin-bottom: 22px; }
   .organizator__text-start {
-    margin-bottom: 40px; }
+    margin-bottom: 33px; }
   .organizator__link-read {
-    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    color: #5286ec;
     position: relative; }
   .organizator__link-read::after {
     content: "";
@@ -843,6 +902,9 @@ template {
     position: absolute;
     top: 7px;
     right: -15px; }
+  @media (min-width: 1280px) {
+    .organizator__content-two {
+      order: 1; } }
 
 .time {
   padding-top: 40px; }
@@ -887,6 +949,9 @@ template {
     padding-top: 20px;
     border-bottom: 0.5px solid #C7C7C7;
     border-top: 0.5px solid #C7C7C7; }
+    @media (min-width: 576px) {
+      .time__text-friday {
+        text-align: left; } }
   .time__rating {
     padding: 30px 0 30px 45px;
     border-bottom: 0.5px solid #C7C7C7; }
@@ -894,17 +959,22 @@ template {
       .time__rating {
         padding: 50px 0 30px 50px; } }
   .time__inner {
-    padding: 16px 15px 30px;
+    padding: 15px 15px 30px;
     display: flex;
     flex-direction: column;
     border-bottom: 0.5px solid #C7C7C7; }
     @media (min-width: 576px) {
       .time__inner {
+        padding: 15px 15px 15px;
         flex-direction: row;
         justify-content: space-between; } }
     .time__inner__inner-one {
       border-bottom: 0.5px solid #C7C7C7; }
   .time__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #37373f;
     margin-bottom: 10px; }
   .time__text-bold {
     font-size: 18px;
@@ -929,7 +999,8 @@ template {
   .map .container__card {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    bottom: 0; }
   .map__map {
     margin-bottom: 52px; }
     @media (min-width: 768px) {
@@ -947,6 +1018,16 @@ template {
       .map__wrapper {
         width: 400px;
         padding: 52px 80px 14px 80px; } }
+  .map__photo {
+    margin-right: 10px;
+    width: 67px;
+    min-width: 67px;
+    height: 67px; }
+  .map__name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #37373f; }
   .map__block {
     display: flex;
     flex-direction: row;
@@ -967,14 +1048,13 @@ template {
   display: flex;
   margin-bottom: 30px; }
 
-.slider__text-bold {
+.slider__circle {
   width: 66px;
   height: 66px;
   font-size: 30px;
   font-weight: 700;
   line-height: 44px;
   color: #fff;
-  text-align: center;
   margin-bottom: 20px;
   margin-right: 0; }
 
@@ -999,12 +1079,14 @@ template {
   color: #37373f;
   text-align: center; }
 
-.text-bold {
+.circle {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #FC9B09;
-  border-radius: 50%; }
+  border-radius: 50%;
+  color: #fff;
+  text-align: center; }
 
 .swiper-container {
   max-width: 100%;
@@ -1100,7 +1182,7 @@ template {
   display: flex;
   margin-bottom: 34px; }
 
-.meeting__text-bold {
+.meeting__circle {
   width: 60px;
   height: 60px;
   font-size: 35px;
@@ -1128,12 +1210,12 @@ template {
   color: #37373f; }
 
 .reviews {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 47px; }
   .reviews__title {
     font-size: 26px;
     font-weight: 400;
-    line-height: 39px;
+    line-height: 40px;
     color: #37373f;
     text-align: center; }
     @media (min-width: 768px) {
@@ -1153,21 +1235,23 @@ template {
       .reviews__title {
         font-size: 20px;
         font-weight: 500;
-        line-height: 39px;
+        line-height: 40px;
         color: #37373f; } }
   .reviews__block {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     border-bottom: 1px solid #C7C7C7; }
-  .reviews__block-none {
+  .reviews__block-three {
     display: none; }
     @media (min-width: 576px) {
-      .reviews__block-none {
-        display: block;
-        max-width: 495px; } }
+      .reviews__block-three {
+        display: block; } }
   .reviews__wrapper {
-    display: flex;
-    margin-bottom: 17px; }
+    margin-bottom: 12px;
+    display: flex; }
+    @media (min-width: 768px) {
+      .reviews__wrapper {
+        margin-bottom: 0px; } }
   .reviews__link {
     text-align: center;
     margin-top: 40px;
@@ -1177,14 +1261,36 @@ template {
     line-height: 25px;
     color: #5286ec; }
   .reviews__photo {
+    width: 84px;
+    height: 84px;
     margin-right: 18px; }
+    @media (min-width: 768px) {
+      .reviews__photo {
+        width: 100px;
+        height: 100px; } }
+  .reviews__icon {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; }
+  .reviews__box-three {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
   .reviews__title-user {
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
     color: #37373f;
     max-width: 160px;
-    margin-bottom: 6px; }
+    margin-bottom: 23px; }
+    @media (min-width: 768px) {
+      .reviews__title-user {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #37373f;
+        max-width: 179px; } }
   .reviews__proffesion {
     font-size: 14px;
     font-weight: 400;
@@ -1197,10 +1303,16 @@ template {
     line-height: 21px;
     color: #37373f;
     max-width: 290px;
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
     @media (min-width: 576px) {
       .reviews__text {
         max-width: 505px; } }
+    @media (min-width: 768px) {
+      .reviews__text {
+        margin-left: 120px; } }
+  @media (min-width: 768px) {
+    .reviews__text-three {
+      max-width: 495px; } }
   .reviews__text-transparent {
     font-size: 14px;
     font-weight: 400;
@@ -1210,7 +1322,6 @@ template {
     margin-left: 15px; }
     @media (min-width: 768px) {
       .reviews__text-transparent {
-        margin-left: 70px;
         margin-bottom: 43px; } }
   .reviews__text-transparent::before {
     content: "";
@@ -1224,15 +1335,20 @@ template {
     top: 0;
     left: -20px; }
   .reviews__row {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     align-self: flex-end; }
   .reviews__date {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     color: #b3b3b3; }
-  @media (min-width: 768px) {
-    .reviews__shell {
-      display: flex; } }
+    @media (min-width: 768px) {
+      .reviews__date {
+        margin-left: 120px; } }
+  .reviews__shell {
+    margin-bottom: 17px; }
+    @media (min-width: 768px) {
+      .reviews__shell {
+        display: flex; } }
 
 /*# sourceMappingURL=style.min.css.map */

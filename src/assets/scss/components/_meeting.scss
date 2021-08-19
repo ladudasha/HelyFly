@@ -3,7 +3,7 @@
         display: flex;
         margin-bottom: 34px;
     }
-    &__text-bold {
+    &__circle {
         width: 60px;
         height: 60px;
         @include text(35px, 700, 51px, $primaryColor);

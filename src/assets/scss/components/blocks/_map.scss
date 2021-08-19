@@ -7,6 +7,8 @@
             position: absolute;
             top: 0;
             left: 0;
+            bottom: 0;
+            // width: 1140px;
         }
     }
     &__map {
@@ -27,6 +29,15 @@
             width: 400px;
             padding: 52px 80px 14px 80px;
         }
+    }
+    &__photo {
+        margin-right: 10px;
+        width: 67px;
+        min-width: 67px;
+        height: 67px;
+    }
+    &__name {
+        @include text (16px, 500, 20px, $secondaryColor);
     }
     &__block {
         display: flex;

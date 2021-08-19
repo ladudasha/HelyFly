@@ -3,16 +3,10 @@
         display: flex;
         margin-bottom: 30px;
     }
-    &__text-bold {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
+    &__circle {
         width: 66px;
         height: 66px;
-        // background: #FC9B09;
         @include text(30px, 700, 44px, $primaryColor);
-        // border-radius: 50%;
-        text-align: center;
         margin-bottom: 20px;
         margin-right: 0;
     }

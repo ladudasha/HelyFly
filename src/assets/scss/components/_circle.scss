@@ -1,5 +1,7 @@
-.text-bold {
+.circle {
     @include flex (center, center);
     background: #FC9B09;
     border-radius: 50%;
+    color: #fff;
+    text-align: center;
 }
