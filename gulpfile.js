@@ -18,6 +18,8 @@ const del = require('del'); // для удаления файлов и папо�
 const notify = require('gulp-notify'); //предоставляет информацию об ошибке
 const browserSync = require('browser-sync').create(); // для запуска сервера и перезагрузки страницы при внесении изменений
 
+const newer = require("gulp-newer")
+
 
 // Пути 
 const srcPath = 'src/';
@@ -84,15 +86,7 @@ function html(cb) {
 function css(cb) {
     return src(srcPath + 'assets/scss/style.scss') // если порядок файлов не важен, то: return src(path.src.css, {base: srcPath + 'assets/scss/'})
         .pipe(sourcemaps.init())
-        .pipe(plumber({
-            errorHandler: function(err) {
-                notify.onError({
-                    title: "SCSS Error",
-                    message: "Error: <%= error.message %>"
-                })(err);
-                this.emit('end');
-            }
-        }))
+        .pipe(plumber())
         .pipe(sass({
             includePaths: './node_modules/'
         }))
@@ -199,6 +193,7 @@ function jsWatch(cb) {
 // Images 
 function images(cb) {
     return src(path.src.images)
+        .pipe(newer(path.build.images))
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({ quality: 95, progressive: true }),
@@ -239,9 +234,9 @@ function watchFiles() {
     gulp.watch([path.watch.images], images);
     gulp.watch([path.watch.fonts], fonts);
 }
+// gulp-newer
 
-
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts)); // Будет запускаться по команде gulp build
+const build = gulp.series(gulp.parallel(html, css, js, images, fonts)); // Будет запускаться по команде gulp build
 const watch = gulp.series(build, gulp.parallel(watchFiles, serve)); // Будет запускаться по дефолтной команде gulp 
 
 
