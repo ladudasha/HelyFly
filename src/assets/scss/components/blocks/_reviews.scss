@@ -37,6 +37,7 @@
     &__wrapper {
         margin-bottom: 12px;
         display: flex;
+        width: 300px;
         @include media (sm) {
             margin-bottom: 0px;
         }

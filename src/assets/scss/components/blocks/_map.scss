@@ -5,8 +5,9 @@
         @extend %container;
         &__card {
             position: absolute;
+            transform: translateX(-50%);
             top: 0;
-            left: 0;
+            left: 50%;
             bottom: 0;
             // width: 1140px;
         }
@@ -47,7 +48,6 @@
     &__card {
         position: absolute;
         top: 65px;
-        left: 65px;
         width: 420px;
         height: 470px;
         display: flex;
