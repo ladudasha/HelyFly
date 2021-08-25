@@ -44,9 +44,37 @@
     }
     &__link {
         text-align: center;
-        margin-top: 40px;
+        padding-top: 40px;
+        margin: 0 auto;
         display: block;
+        max-width: 205px;
         @include text (17px, 500, 25px, $linkColor);
+        position: relative;
+    }
+    &__link::before {
+        content: "";
+        background-image: url(../images/photocards/arrow.svg);
+        display: block;
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        display: none;
+        @include media (sm) {
+            display: block;
+        }
+    }
+    &__link::after {
+        content: "";
+        background-image: url(../images/reviews/Arrow.svg);
+        display: block;
+        width: 11px;
+        height: 6px;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        @include media (sm) {}
     }
     &__photo {
         width: 84px;

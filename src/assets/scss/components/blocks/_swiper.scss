@@ -2,6 +2,7 @@
             max-width: 100%;
             width: 100%;
             margin-bottom: 40px;
+            position: relative;
         }
         
         .swiper-slide {
@@ -14,10 +15,12 @@
         
         .swiper-pagination-bullet {
             background-color: #FC9B09;
+            width: 10px;
+            height: 10px;
         }
         
         .swiper-button-next::after {
-            background-image: url(../images/maps/arrow-swiper.svg);
+            background-image: url(../images/map/arrow-swiper.svg);
             background-size: contain;
             width: 26px;
             height: 21px;
@@ -25,7 +28,7 @@
         }
         
         .swiper-button-prev::after {
-            background-image: url(../images/maps/arrow-swiper.svg);
+            background-image: url(../images/map/arrow-swiper.svg);
             background-size: contain;
             width: 26px;
             height: 21px;
@@ -42,7 +45,8 @@
             top: -30px;
         }
         
-        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
         .swiper-pagination-custom,
         .swiper-pagination-fraction {
             position: absolute;

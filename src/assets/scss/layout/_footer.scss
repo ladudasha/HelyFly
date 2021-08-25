@@ -1,13 +1,19 @@
 .footer {
     padding-top: 30px;
     padding-bottom: 20px;
+    @include media (xs) {
+        padding-top: 20px;
+    }
     .container {
         @extend %container;
     }
     &__top {
-        margin-bottom: 24px;
+        padding-bottom: 24px;
         @include media (xs) {
-            margin-bottom: 50px;
+            padding-bottom: 50px;
+        }
+        @include media (lg) {
+            padding: 0 70px 27px 65px;
         }
     }
     &__block-icons {
@@ -21,16 +27,23 @@
         }
     }
     &__social {
-        min-width: 137px;
+        min-width: 140px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include media (xs) {
+            min-width: 130px;
+        }
+        @include media (md) {
+            min-width: 210px;
+        }
     }
     &__bottom {
         padding-top: 25px;
         border-top: 1px solid #C7C7C7;
         @include media (xs) {
             background-color: #FAF9F8;
+            padding-top: 15px;
         }
     }
     &__grid {
@@ -38,8 +51,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         @include media (xs) {
-            // grid-template-columns: repeat(3, 1fr);
-            grid-template-columns: 100px auto 45px;
+            grid-template-columns: 100px auto;
             grid-template-rows: 1fr;
         }
     }
@@ -49,16 +61,31 @@
         justify-content: space-between;
         grid-area: 1/1/2/3;
         margin-bottom: 24px;
+        @include media (xs) {
+            margin-bottom: 0px;
+        }
     }
     &__pay {
         display: flex;
+        @include media (lg) {
+            margin-left: 65px;
+        }
     }
     &__lang {
         @include text(15px, 400, 18px, $secondaryColor);
         position: relative;
         margin-right: 20px;
         @include media (xs) {
-            grid-area: 1/3/2/4;
+            margin-right: 13px;
+        }
+        @include media (md) {
+            display: none;
+        }
+        &--ivisible {
+            display: none;
+            @include media (md) {
+                display: block;
+            }
         }
     }
     &__lang::after {
@@ -71,8 +98,18 @@
         top: 7px;
         right: -15px;
     }
+    &__pay {
+        align-items: center;
+        min-width: 100px;
+        @include media (xs) {
+            justify-content: space-between;
+        }
+    }
     &__pay-card {
         margin-right: 17px;
+        @include media (xs) {
+            margin-right: 0px;
+        }
     }
     &__content {
         grid-area: 2/1/3/3;
