@@ -1526,6 +1526,7 @@ template {
     max-width: 100%;
     width: 100%;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .swiper-slide {
@@ -1541,10 +1542,12 @@ template {
 
 .swiper-pagination-bullet {
     background-color: #FC9B09;
+    width: 10px;
+    height: 10px;
 }
 
 .swiper-button-next::after {
-    background-image: url(../images/maps/arrow-swiper.svg);
+    background-image: url(../images/map/arrow-swiper.svg);
     background-size: contain;
     width: 26px;
     height: 21px;
@@ -1552,7 +1555,7 @@ template {
 }
 
 .swiper-button-prev::after {
-    background-image: url(../images/maps/arrow-swiper.svg);
+    background-image: url(../images/map/arrow-swiper.svg);
     background-size: contain;
     width: 26px;
     height: 21px;
@@ -1570,7 +1573,8 @@ template {
     top: -30px;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
     position: absolute;
@@ -1759,12 +1763,44 @@ template {
 
 .reviews__link {
     text-align: center;
-    margin-top: 40px;
+    padding-top: 40px;
+    margin: 0 auto;
     display: block;
+    max-width: 205px;
     font-size: 17px;
     font-weight: 500;
     line-height: 25px;
     color: #5286ec;
+    position: relative;
+}
+
+.reviews__link::before {
+    content: "";
+    background-image: url(../images/photocards/arrow.svg);
+    display: block;
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .reviews__link::before {
+        display: block;
+    }
+}
+
+.reviews__link::after {
+    content: "";
+    background-image: url(../images/reviews/Arrow.svg);
+    display: block;
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
 }
 
 .reviews__photo {
