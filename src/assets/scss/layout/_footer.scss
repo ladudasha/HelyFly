@@ -1,6 +1,5 @@
 .footer {
     padding-top: 30px;
-    padding-bottom: 20px;
     @include media (xs) {
         padding-top: 20px;
     }
@@ -40,10 +39,11 @@
     }
     &__bottom {
         padding-top: 25px;
-        border-top: 1px solid #C7C7C7;
+        padding-bottom: 20px;
         @include media (xs) {
             background-color: #FAF9F8;
             padding-top: 15px;
+            padding-bottom: 15px;
         }
     }
     &__grid {
@@ -81,7 +81,7 @@
         @include media (md) {
             display: none;
         }
-        &--ivisible {
+        &--invisible {
             display: none;
             @include media (md) {
                 display: block;
@@ -101,22 +101,29 @@
     &__pay {
         align-items: center;
         min-width: 100px;
-        @include media (xs) {
-            justify-content: space-between;
-        }
     }
     &__pay-card {
         margin-right: 17px;
         @include media (xs) {
-            margin-right: 0px;
+            margin-right: 27px;
+            transform: scale(1.2);
+        }
+    }
+    &__pay-visa {
+        @include media (xs) {
+            transform: scale(1.2);
         }
     }
     &__content {
         grid-area: 2/1/3/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         @include text(14px, 400, 17px, $textColor);
         margin: 0 auto;
         @include media (xs) {
-            grid-area: 1/2/2/3;
+            grid-area: 1/1/2/3;
+            transform: scale(1);
         }
     }
     &__number {

@@ -1283,7 +1283,7 @@ template {
         display: block; } }
   .reviews__link::after {
     content: "";
-    background-image: url(../images/reviews/Arrow.svg);
+    background-image: url(../images/reviews/Arrow-right.jpg);
     display: block;
     width: 11px;
     height: 6px;
@@ -1382,8 +1382,7 @@ template {
         display: flex; } }
 
 .footer {
-  padding-top: 30px;
-  padding-bottom: 20px; }
+  padding-top: 30px; }
   @media (min-width: 576px) {
     .footer {
       padding-top: 20px; } }
@@ -1415,11 +1414,12 @@ template {
         min-width: 210px; } }
   .footer__bottom {
     padding-top: 25px;
-    border-top: 1px solid #C7C7C7; }
+    padding-bottom: 20px; }
     @media (min-width: 576px) {
       .footer__bottom {
         background-color: #FAF9F8;
-        padding-top: 15px; } }
+        padding-top: 15px;
+        padding-bottom: 15px; } }
   .footer__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1455,10 +1455,10 @@ template {
     @media (min-width: 1280px) {
       .footer__lang {
         display: none; } }
-    .footer__lang--ivisible {
+    .footer__lang--invisible {
       display: none; }
       @media (min-width: 1280px) {
-        .footer__lang--ivisible {
+        .footer__lang--invisible {
           display: block; } }
   .footer__lang::after {
     content: "";
@@ -1472,16 +1472,20 @@ template {
   .footer__pay {
     align-items: center;
     min-width: 100px; }
-    @media (min-width: 576px) {
-      .footer__pay {
-        justify-content: space-between; } }
   .footer__pay-card {
     margin-right: 17px; }
     @media (min-width: 576px) {
       .footer__pay-card {
-        margin-right: 0px; } }
+        margin-right: 27px;
+        transform: scale(1.2); } }
+  @media (min-width: 576px) {
+    .footer__pay-visa {
+      transform: scale(1.2); } }
   .footer__content {
     grid-area: 2/1/3/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
@@ -1489,7 +1493,8 @@ template {
     margin: 0 auto; }
     @media (min-width: 576px) {
       .footer__content {
-        grid-area: 1/2/2/3; } }
+        grid-area: 1/1/2/3;
+        transform: scale(1); } }
   .footer__number {
     margin-bottom: 10px; }
 
