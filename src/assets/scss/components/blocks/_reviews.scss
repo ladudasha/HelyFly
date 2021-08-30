@@ -74,6 +74,8 @@
         position: absolute;
         top: 50px;
         right: 0px;
+        background-repeat: no-repeat;
+        background-position: center;
         @include media (sm) {}
     }
     &__photo {
