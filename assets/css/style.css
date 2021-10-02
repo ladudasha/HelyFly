@@ -1794,13 +1794,15 @@ template {
 
 .reviews__link::after {
     content: "";
-    background-image: url(../images/reviews/Arrow.svg);
+    background-image: url(../images/reviews/Arrow-right.jpg);
     display: block;
     width: 11px;
     height: 6px;
     position: absolute;
     top: 50px;
     right: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .reviews__photo {
@@ -1947,7 +1949,6 @@ template {
 
 .footer {
     padding-top: 30px;
-    padding-bottom: 20px;
 }
 
 @media (min-width: 576px) {
@@ -2011,13 +2012,14 @@ template {
 
 .footer__bottom {
     padding-top: 25px;
-    border-top: 1px solid #C7C7C7;
+    padding-bottom: 20px;
 }
 
 @media (min-width: 576px) {
     .footer__bottom {
         background-color: #FAF9F8;
         padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
 
@@ -2083,12 +2085,12 @@ template {
     }
 }
 
-.footer__lang--ivisible {
+.footer__lang--invisible {
     display: none;
 }
 
 @media (min-width: 1280px) {
-    .footer__lang--ivisible {
+    .footer__lang--invisible {
         display: block;
     }
 }
@@ -2110,25 +2112,33 @@ template {
     min-width: 100px;
 }
 
-@media (min-width: 576px) {
-    .footer__pay {
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-}
-
 .footer__pay-card {
     margin-right: 17px;
 }
 
 @media (min-width: 576px) {
     .footer__pay-card {
-        margin-right: 0px;
+        margin-right: 27px;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+@media (min-width: 576px) {
+    .footer__pay-visa {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
     }
 }
 
 .footer__content {
     grid-area: 2/1/3/3;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
@@ -2138,7 +2148,9 @@ template {
 
 @media (min-width: 576px) {
     .footer__content {
-        grid-area: 1/2/2/3;
+        grid-area: 1/1/2/3;
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
 }
 
